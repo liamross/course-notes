@@ -24,7 +24,7 @@ space required: 2n^2 (p[mi] for each and p[wj] for each)
 
 ## Representing the Solution
 
-### What are the quanities that matter in the solution to the problem?
+### What are the quanities that matter in the solution to the problem
 
 > Give them short, usable names
 
