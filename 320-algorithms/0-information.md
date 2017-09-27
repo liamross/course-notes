@@ -20,6 +20,8 @@ html codes:
 
 &hArr; = ⇔ - dependency
 
+&isin; = ∈ - element of
+
 
 
 [html char codes](http://www.dionysia.org/html/entities/symbols.html)

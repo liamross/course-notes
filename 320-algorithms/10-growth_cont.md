@@ -1,4 +1,4 @@
-# Growth continued
+# Growth Continued 27/09/2017
 
 ```javascript
 function FindNeighboringInversion(A) { // Double loop, detects if not sorted.
