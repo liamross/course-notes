@@ -23,3 +23,16 @@ if (first <= middle && middle <= last) { // constant time --> O(1)
 ```javascript
 // loop inside for loop, O(n^2)
 ```
+
+```javascript
+function FindNeighboringInversion(A) { // Double loop, detects if not sorted.
+  returns -1; // if not sorted
+};
+
+let i = FindNeighboringInversion(A);
+
+while (i >= 0) {
+  Swap(A[i], A[i+1]);
+  i = FindNeighboringInversion(A);
+}
+```
