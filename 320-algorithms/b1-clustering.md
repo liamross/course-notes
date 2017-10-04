@@ -24,4 +24,6 @@ w<sub>3</sub> = [P<sub>2</sub>, P<sub>3</sub>] = 1
 
 ### Reasonable Graph for Set of Pictures
 
-![Photo similarity indexes]()
+![alt text][logo]
+
+[logo]: https://github.com/liamross/course-notes/blob/master/320-algorithms/images/Photo_Weights.png "Photo similarity indexes"
