@@ -2,6 +2,8 @@
 
 [site](http://blogs.ubc.ca/cpsc3202017w1/)
 
+[accompanying slides](http://www.cs.princeton.edu/~wayne/kleinberg-tardos/)
+
 html codes:
 
 &cong; = ≅ - approximately equal to
