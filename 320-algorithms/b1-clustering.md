@@ -26,3 +26,12 @@ w<sub>3</sub> = [P<sub>2</sub>, P<sub>3</sub>] = 1
 
 ![b1_weights](images/b1_weights.png)
 
+However, this is not based on the parameters of the problem, which outline the
+number of categories required.
+
+&forall; e in E, e = (u, V, w) where w is the simmilarity of u + v,
+S(u, v) -> w 0 <= w <= 1.
+
+V = {p<sub>1</sub>, ..., p<sub>n</sub>}, n is # of photos.
+
+C = k.
