@@ -24,4 +24,3 @@ while (an unengaged man with at least one woman on his preferance list remains)
       cross w off m's preferance list
 report set of engaged pairs as final matching.
 ```
-
