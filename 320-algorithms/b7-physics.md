@@ -77,3 +77,5 @@ Simplified:
 Tree:
 
 ![b7_quicksort_runtime_tree](images/b7_quicksort_runtime_tree.png)
+
+* choice of pivot is "Lucky", follows an algorithm as if known beforehand
