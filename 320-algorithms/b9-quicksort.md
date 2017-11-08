@@ -61,7 +61,7 @@ T(n) = T(cn) + O(n), c < 1 &rArr; T(n) = O(n)
 
 * **c can go arbitrarily close to 1, and it will help us**
 
-## Working through a real code example
+## QuickSelect
 
 [See example here.](https://www.ugrad.cs.ubc.ca/~cs320/misc/Deterministic-Select-in-O-of-n-blank.html)
 
@@ -70,9 +70,9 @@ T(n) = T(cn) + O(n), c < 1 &rArr; T(n) = O(n)
 1. divide into rows (5 x 10 perhaps)
 
 1. sort each row based, then sort the columns based on middle value  
-**1** **2** **3** 4 5  
-**2** **4** **6** 8 10  
-**3** **6** **9** 12 15  
+***1*** ***2*** ***3*** 4 5  
+***2*** ***4*** ***6*** 8 10  
+***3*** ***6*** ***9*** 12 15  
 4 8 12 16 20  
 5 10 15 20 25  
 
@@ -88,8 +88,8 @@ def deterministic_select(A, i):
     # Base Case: When we have fewer than five elements, just find the i'th
     # largest directly.
     if len(A) < 5:
-        # TODO
-        return 0
+      A.sort()
+      return A[i]
 
     # Note: Python's documentation stipulates that a slice like a[i:j] where
     # j > len(a) behaves as if j were len(a).
@@ -102,27 +102,37 @@ def deterministic_select(A, i):
     blocks = []
     for b in range((len(A) - 1) //5 +1): # same as finding the ceiling.
       blocks.append(sorted(A[b*5:(b+1)*5]))
-    print (blocks)
 
     # Find the median of the medians
     medians = [b1[len(b1)//2] for b1 in blocks]
-    print (medians)
     # (use recursive call to find medians)
     median_of_medians = deterministic_select(medians, len(medians)//2 +1)
 
     # Partition out the smaller/larger elements.
+<<<<<<< HEAD
     lesser = []   # TODO: all elements less than the mom (median_of_medians)
     greater = []  # TODO: all elements greater than the mom
     moms = []     # TODO: all elements equal to the mom; yes, there could be many
+=======
+    lesser =  [v for v in A if v < median_of_medians]   # all lesser
+    greater = [v for v in A if v > median_of_medians]   # all greater
+    moms =    [v for v in A if v == median_of_medians]  # all equal
+>>>>>>> 3336a542377783b91a755b317bbc7baaaa29eae7
 
     # Depending on the sizes of lesser, moms (median of medians),
     # greater, figure out whether we are:
-    #  1) Done (when the ith largest element is in moms)
+
     #  2) Recursing to the left (from our perspective, into greater)
+    if (len(greater) >= i):
+      return deterministic_select(greater, i)
+    #  1) Done (when the ith largest element is in moms)
+    if (len(greater) + len(moms) >= i):
+      return median_of_medians
     #  3) Recursing to the right (from our perspective, into lesser)
+    else:
+      return deterministic_select(lesser, i - len(greater) - len(moms))
     # Note that this is no different from quickselect. Indeed, deterministic and
     # quick select only differ on how they pick the pivot.
-
     # TODO: finish!
     return 0
 ```
