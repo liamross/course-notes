@@ -85,7 +85,8 @@ def deterministic_select(A, i):
     Given a list of numbers A and a number 1 <= i <= len(A), return the i'th
     largest element of A.
     """
-    # Base Case: When we have fewer than five elements, just find the i'th largest directly.
+    # Base Case: When we have fewer than five elements, just find the i'th
+    # largest directly.
     if len(A) < 5:
         # TODO
         return 0
@@ -110,9 +111,9 @@ def deterministic_select(A, i):
     median_of_medians = deterministic_select(medians, len(medians)//2 +1)
 
     # Partition out the smaller/larger elements.
-    lesser = [] # TODO: all elements less than the mom (median_of_medians)
-    greater = [] # TODO: all elements greater than the mom
-    moms = [] # TODO: all elements equal to the mom; yes, there could be many
+    lesser = []   # TODO: all elements less than the mom (median_of_medians)
+    greater = []  # TODO: all elements greater than the mom
+    moms = []     # TODO: all elements equal to the mom; yes, there could be many
 
     # Depending on the sizes of lesser, moms (median of medians),
     # greater, figure out whether we are:
