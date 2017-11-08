@@ -109,15 +109,9 @@ def deterministic_select(A, i):
     median_of_medians = deterministic_select(medians, len(medians)//2 +1)
 
     # Partition out the smaller/larger elements.
-<<<<<<< HEAD
-    lesser = []   # TODO: all elements less than the mom (median_of_medians)
-    greater = []  # TODO: all elements greater than the mom
-    moms = []     # TODO: all elements equal to the mom; yes, there could be many
-=======
     lesser =  [v for v in A if v < median_of_medians]   # all lesser
     greater = [v for v in A if v > median_of_medians]   # all greater
     moms =    [v for v in A if v == median_of_medians]  # all equal
->>>>>>> 3336a542377783b91a755b317bbc7baaaa29eae7
 
     # Depending on the sizes of lesser, moms (median of medians),
     # greater, figure out whether we are:
